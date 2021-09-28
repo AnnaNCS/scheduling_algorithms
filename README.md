@@ -19,7 +19,8 @@ Short-term scheduling
 
 Non-preemptive scheduling algorithm
 * Allows a process to run until blocked on a resource or terminated
-	
+:
+
 	t1	   t2	      t3	 t4
 	|__________|__________|
 			      |__________|
@@ -29,6 +30,7 @@ Non-preemptive scheduling algorithm
 
 Preemptive scheduling algorithm
 * May switch betweeen processes
+</n>
 	
 	t1	   t2	      t3	 t4
 	|__________|          |__________|
@@ -71,3 +73,7 @@ Multilevel feedback (MLF) algorithm
 Rate monotonic (RM) algorithm
 
 Earliest deadline first (EDF) algorithm
+
+
+
+
