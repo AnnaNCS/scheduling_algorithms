@@ -12,7 +12,7 @@ The main goal of this project was to:
 # Priority Algorithms 
 
 Long-term scheduling:
-	>Scheduling to enter the ready state from the new processes or the suspended list 
+	<p>Scheduling to enter the ready state from the new processes or the suspended list </p>
 
 Short-term scheduling
 	>Scheduling of processees to move from ready state to run on the CPU, as well as movement between running, ready, or blocked states. 
