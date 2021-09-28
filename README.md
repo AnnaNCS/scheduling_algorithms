@@ -19,7 +19,7 @@ Short-term scheduling
 
 Non-preemptive scheduling algorithm
 * Allows a process to run until blocked on a resource or terminated
-:
+</n>
 
 	t1	   t2	      t3	 t4
 	|__________|__________|
