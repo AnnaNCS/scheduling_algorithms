@@ -11,13 +11,31 @@ The main goal of this project was to:
 
 # Priority Algorithms 
 
-Long-term scheduling
+Long-term scheduling:
+	Scheduling to enter the ready state from the new processes or the suspended list 
 
 Short-term scheduling
+	Scheduling of processees to move from ready state to run on the CPU, as well as movement between running, ready, or blocked states. 
 
 Non-preemptive scheduling algorithm
+	Allows a process to run until blocked on a resource or terminated
+	
+	t1	   t2	      t3	 t4
+	|__________|__________|
+			      |__________|
+			      
+	p1 starts at t1 and ends at t3
+	p2 should start at t2, waits untils p1 ends, and starts at t3 and ends at t4
 
 Preemptive scheduling algorithm
+	May switch betweeen processes
+	
+	t1	   t2	      t3	 t4
+	|__________|          |__________|
+		   |__________|
+		   
+	p1 starts at t1 and is interrupted by p2, which starts at t2 
+	p2 finsihes at t3 so that p1 ends at t4
 
 # Batch Processes Scheduling
 
