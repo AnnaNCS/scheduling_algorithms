@@ -1,7 +1,7 @@
 //
 // Created by jackj on 9/29/2021.
 //
-// C++ program implementation Shortest Job first, followed geeks for geeks guide online for pse
+// C++ program implementation Shortest Job first, followed geeks for geeks guide online for pseudo code and text formatting
 //ToDo Might be able to make this faster at a later date, possible loop unrolling or something else can be done
 #include <iostream>
 using namespace std;
