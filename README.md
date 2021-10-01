@@ -82,7 +82,7 @@ SRT (Shortest Remaining Time) algorithm
 	|__________|__________|..........|.........|..........|..........|__________|__________|__________|__________|
 			      |__________|.........|__________|__________|
 			      		 |_________|
-	
+					 
 	.. WAIT TIME 
 	__ CPU TIME
 	p1 starts at t1, p2 arrives at t3, p3 arrives at t4, 
@@ -90,7 +90,6 @@ SRT (Shortest Remaining Time) algorithm
 	at t4, p1 has 4 CPU time left, p2 has 2 and p3 has 1   => p3 starts and ends at t5
 	at t5, p1 has 4 CPU time left and p2 only 2 	       => p2 continues and ends at t7 
 	and at t7 p1 is the only left and continues and ends at t11
-	
 	What if for two prosesses that are ready to continue have same CPU time left, which one finishes first? 
 
 
