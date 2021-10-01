@@ -103,6 +103,7 @@ Round-robin (RR) algorithm
 
 </n>
 	
+<<<<<<< HEAD
 	   t1	      t1	     t3...   	tn-1       tn
 	p1 |__________|          
 	p2            |__________|
@@ -110,6 +111,14 @@ Round-robin (RR) algorithm
 	.
 	.
 	pn 					                |__________|
+=======
+	  t1	      t2	 t3	...   	      tn-1        tn
+	p1 |__________|          
+	p2            |__________|
+	.		
+	.			
+	pn  					       |__________|
+>>>>>>> 46fa761934e3bd3b73506bbf726691e62de24818
 		   
 
 Multilevel (ML) scheduling 
