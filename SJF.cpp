@@ -4,6 +4,11 @@
 // C++ program implementation Shortest Job first, followed geeks for geeks guide online for pseudo code and text formatting
 //ToDo Might be able to make this faster at a later date,
 //possible loop unrolling or something else can be done
+//
+// In order to run the program on a Mac, go the directory where your code is and run the following:
+// % g++ -o FIFO FIFO.cpp
+// % ./FIFO 
+
 #include <iostream>
 using namespace std;
 int arr[10][6];

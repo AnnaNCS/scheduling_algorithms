@@ -103,43 +103,56 @@ Round-robin (RR) algorithm
 
 </n>
 	
-	  t1	      t2	 t3	...   	 tn-1        tn
+	   t1	      t1	     t3...   	tn-1       tn
 	p1 |__________|          
 	p2            |__________|
 	.
 	.
 	.
-	pn 					  |__________|
+	pn 					                |__________|
 		   
-	
-
 
 Multilevel (ML) scheduling 
-* Consists of multiple queues, each given a priority level. The process at each level is executed using the Round-robin algorithm.
-When a process enters a higher priority level, process execution is interrupted and is put to the back of the queue.
+* Consists of multiple queues, each given a priority level. The process at each level is executed using the Round-robin algorithm. When a process enters a higher priority level, process execution is interrupted and is put to the back of the queue.
 
 </n>
 	
 	     			    CPU
 	N	__________[b]_____|_____|
-	N-1	__________________|	|
+	N-1	__________________|	    |
 	N-2	__________[c]_____| [a] |
 	.			  |	|
 	.			  |	|
 	1	__________________|_____|
 	
-	During execution of [a], its process would be interrupted because [b] arrived at a higher priority level.
+	During execution of [a], its process would be interrupted 
+	because [b] arrived at a higher priority level.
 
 Multilevel feedback (MLF) algorithm
-* MLF is a variation of ML, but it addresses problems of starvation and fairness by using different time quantum at each level and changing the priority of every process dynamically. MLF automatically favors short-running processes while processes with long running times gradually migrate to lower levels
+* MLF is a variation of ML, but it addresses problems of starvation and fairness by changing the priority of every process dynamically. The quantum size is doubled with each decreasing priority level. MLF automatically favors short-running processes while processes with long running times gradually migrate to lower levels
 
 
 # Real Time Processes Scheduling  
 
 Rate monotonic (RM) algorithm
+* RM chedules processes based on the period. The period is the given time for a process during which it must be processed. The shorter the period, the higher the priority. RM is preemptive.
+
+</n>
+	
+	p1:
+	t1	       t2	      t3	 	 t4	   	    t5	       t6	      t7	     t8	        t9	       t10	      t11
+	||.........|..........||.........|..........||.........|..........||.........|..........||.........|..........||
+	|__________|		  |__________|		    |__________|		  |__________|		    |__________|	
+    p2:
+    ||.........|..........|..........|..........||.........|..........|..........|..........||.........|..........|			
+		       |__________|		  	 |__________|		   |__________|		     |__________|
+					 
+	|| START OF PERIOD 
+	__ CPU TIME
+	p2 having a longer period time (4), always gives p1 priority.  
 
 Earliest deadline first (EDF) algorithm
-* EDF prioritizes processes whose deadline is the closest first. The priorities are assigned and changed dynamically. EDF is very efficient as compared to other scheduling algorithms in real-time systems. It can make the CPU utilization to about 100% while still guaranteeing the deadlines of all the tasks.
+* EDF prioritizes processes whose deadline is the closest first. The priorities are assigned and change dynamically. EDF is very efficient as compared to other scheduling algorithms in real-time systems. It can make the CPU utilization to about 100% while still guaranteeing the deadlines of all the tasks.
 
 
 
