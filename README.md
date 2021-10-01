@@ -50,7 +50,7 @@ FIFO (First-In-First-Out) algorithm, also known as FCFS (First-Come-First-Served
 			      |..........|_________|__________|
 			      		 |.........|..........|___________|
 	
-	-- WAIT TIME 
+	.. WAIT TIME 
 	__ CPU TIME
 	p1 arrives at t1, is the first one to arrive, finishes at t4 
 	p2 arrives at t3, is the next one to arrive, waits for p1 and starts at t4, and finishes at t6
@@ -62,12 +62,12 @@ SJF (Shortest Job First) algorithm, also known as SJN (Shortest Job Next)
 	
 	t1	   t2	      t3	 t4	   t5	      t6	 t7
 	|__________|__________|__________|
-			      |----------|---------|__________|___________|
+			      |..........|.........|__________|___________|
 			      		 |_________|
 	
-	-- WAIT TIME 
+	.. WAIT TIME 
 	__ CPU TIME
-	p1 arrives at t1, is the first one to arrive, finishes at t4 
+	p1 arrives at t1, is the first one, finishes at t4 
 	p2 arrives at t3, has CPU time of 2
 	p3 arrives at t4, has CPU time of 1
 	=> p3 start first at t4 and finishes at t5 
@@ -76,6 +76,23 @@ SJF (Shortest Job First) algorithm, also known as SJN (Shortest Job Next)
 
 SRT (Shortest Remaining Time) algorithm 
 * Schedules processes according to the remaining CPU time needed to complete the work. The shorter the remaining CPU time, the higher the priority. This algorithm is very similar to the aforementioned SFJ scheduling. The difference is this is the preemptive version of it. This means tasks can interrupt other tasks in the event that one requires less cpu time than an already queued task (ie preempt that task). This has the same issues as SJF where longer tasks can end up never getting enough time.
+<n\>
+
+	t1	   t2	      t3	 t4	   t5	      t6	 t7	    t8	       t9	  t10	     t11
+	|__________|__________|..........|.........|..........|..........|__________|__________|__________|__________|
+			      |__________|.........|__________|__________|
+			      		 |_________|
+	
+	.. WAIT TIME 
+	__ CPU TIME
+	p1 starts at t1, p2 arrives at t3, p3 arrives at t4, 
+	at t3, p1 has 4 CPU time left and p2 only 3 	       => p2 starts 
+	at t4, p1 has 4 CPU time left, p2 has 2 and p3 has 1   => p3 starts and ends at t5
+	at t5, p1 has 4 CPU time left and p2 only 2 	       => p2 continues and ends at t7 
+	and at t7 p1 is the only left and continues and ends at t11
+	
+	What if for two prosesses that are ready to continue have same CPU time left, which one finishes first? 
+
 
 # Interactive Processes Scheduling
 
