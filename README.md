@@ -43,7 +43,7 @@ Preemptive scheduling algorithm
 
 FIFO (First-In-First-Out) algorithm, also known as FCFS (First-Come-First-Served)
 * Schedules processes strictly according to the process arrival time. The earlier the arrival, the higher the priority. The advantage of FIFO scheduling is it means the cpu will always be working on the task pushed first. This makes sure the first scheduled task is the first one to complete. If you know the order of your program this can be quite useful as you can potentially use this to optimize getting what you need done most urgently first.
-<n/>
+</n>
 
 	t1	   t2	      t3	 t4	   t5	      t6	 t7
 	|__________|__________|__________|
@@ -58,7 +58,7 @@ FIFO (First-In-First-Out) algorithm, also known as FCFS (First-Come-First-Served
 	
 SJF (Shortest Job First) algorithm, also known as SJN (Shortest Job Next)
 * Schedules processes according to the total CPU time requirements. The shorter the required CPU time, the higher the priority. The advantage of SJF scheduling is it means the lightest tasks are handled quickly which can leave more cpu resources for heavier tasks. Though it is important to note that if you're not careful it can result in long tasks never getting cpu time they need if you have a ton of shorter tasks.
-<n/>
+</n>
 	
 	t1	   t2	      t3	 t4	   t5	      t6	 t7
 	|__________|__________|__________|
@@ -76,7 +76,7 @@ SJF (Shortest Job First) algorithm, also known as SJN (Shortest Job Next)
 
 SRT (Shortest Remaining Time) algorithm 
 * Schedules processes according to the remaining CPU time needed to complete the work. The shorter the remaining CPU time, the higher the priority. This algorithm is very similar to the aforementioned SFJ scheduling. The difference is this is the preemptive version of it. This means tasks can interrupt other tasks in the event that one requires less cpu time than an already queued task (ie preempt that task). This has the same issues as SJF where longer tasks can end up never getting enough time.
-<n\>
+</n>
 
 	t1	   t2	      t3	 t4	   t5	      t6	 t7	    t8	       t9	  t10	     t11
 	|__________|__________|..........|.........|..........|..........|__________|__________|__________|__________|
