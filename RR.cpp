@@ -9,9 +9,9 @@ void calcWaitTime(int processes[], int n,
                   int burstTime[], int waitTime[], int quantum)
 {
 
-    int rem_burstTime[n];
+    int rm_burstTime[n];
     for (int i = 0 ; i < n ; i++)
-        rem_burstTime[i] = burstTime[i];
+        rm_burstTime[i] = burstTime[i];
 
     int t = 0;
 
@@ -22,24 +22,24 @@ void calcWaitTime(int processes[], int n,
         for (int i = 0 ; i < n; i++)
         {
 
-            if (rem_burstTime[i] > 0)
+            if (rm_burstTime[i] > 0)
             {
                 done = false;
 
-                if (rem_burstTime[i] > quantum)
+                if (rm_burstTime[i] > quantum)
                 {
                     t += quantum;
 
-                    rem_burstTime[i] -= quantum;
+                    rm_burstTime[i] -= quantum;
                 }
 
                 else
                 {
-                    t = t + rem_burstTime[i];
+                    t = t + rm_burstTime[i];
 
                     waitTime[i] = t - burstTime[i];
 
-                    rem_burstTime[i] = 0;
+                    rm_burstTime[i] = 0;
                 }
             }
         }
@@ -68,7 +68,7 @@ void calcAvgTime(int processes[], int n, int burstTime[],
     calcTRT(processes, n, burstTime, waitTime, TRT);
 
     cout << "Processes "<< " Burst time "
-         << " Wait time " << " TRT\n";
+         << " Waiting Time " << " TRT\n";
 
     for (int i=0; i<n; i++)
     {
