@@ -11,6 +11,7 @@ The main goal of this project was to:
 To run the algorithm programs: 
 
 % g++ -o algorithm_name algorithm_name.cpp
+
 % ./algorithm_name
 
 
