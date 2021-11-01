@@ -9,6 +9,7 @@ The main goal of this project was to:
 * The comparisson of the algorithms will display cases in which each algorithm is at its best efficiency. Metrics such as time and speed will be compaired. 
 
 To run the algorithm programs: 
+
 % g++ -o algorithm_name algorithm_name.cpp
 % ./algorithm_name
 
