@@ -12,7 +12,7 @@ void calcWaitTime(int processes[], int n,
     for (int i = 0; i < n; i++)
         rm_burstTime[i] = burstTime[i];
     int t = 0;
-    
+
     while (1) {
         bool done = true;
 
@@ -70,10 +70,7 @@ void calcAvgTime(int processes[], int n, int burstTime[],
 int main() {
     int processes[] = {1, 2, 3};
     int n = sizeof processes / sizeof processes[0];
-
-
     int burst_time[] = {36, 12, 98};
-
     int quantum = 2;
     calcAvgTime(processes, n, burst_time, quantum);
     return 0;
