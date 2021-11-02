@@ -23,7 +23,7 @@ void calcWaitTime(Process proc[], int n,
     int complete = 0, t = 0, minm = INT_MAX;
     int shortest = 0, fin_Time;
     bool check = false;
-    
+
     while (complete != n) {
 
         for (int j = 0; j < n; j++) {
@@ -100,7 +100,7 @@ void calcAvgTime(Process proc[], int n)
 
 int main()
 {
-    Process proc[] = { { 1, 6, 1 }, { 2, 3, 9 },
+    Process proc[] = { { 1, 3, 4 }, { 2, 3, 9 },
                        { 3, 4, 6 }, { 4, 4, 6 } };
     int n = sizeof(proc) / sizeof(proc[0]);
     calcAvgTime(proc, n);
