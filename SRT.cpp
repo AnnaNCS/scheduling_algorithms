@@ -103,10 +103,9 @@ void calcAvgTime(Process proc[], int n)
 
 int main()
 {
-    Process proc[] = { { 1, 6, 1 }, { 2, 8, 1 },
-                       { 3, 7, 2 }, { 4, 3, 3 } };
+    Process proc[] = { { 1, 6, 1 }, { 2, 3, 9 },
+                       { 3, 4, 6 }, { 4, 4, 6 } };
     int n = sizeof(proc) / sizeof(proc[0]);
-
     calcAvgTime(proc, n);
     return 0;
 }
