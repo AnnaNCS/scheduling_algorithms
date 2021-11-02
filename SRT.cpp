@@ -12,7 +12,6 @@ struct Process {
     int arrivalTime;
 };
 
-
 void calcWaitTime(Process proc[], int n,
                      int waitTime[])
 {
@@ -24,7 +23,6 @@ void calcWaitTime(Process proc[], int n,
     int complete = 0, t = 0, minm = INT_MAX;
     int shortest = 0, fin_Time;
     bool check = false;
-
 
     while (complete != n) {
 
@@ -97,12 +95,11 @@ void calcAvgTime(Process proc[], int n)
              << "\t\t " << TRT[i] << endl;
     }
 
-    cout << "\nAverage waiting time = "
+    cout << "\nAverage wait time = "
          << (float)total_waitTime / (float)n;
-    cout << "\nAverage turn around time = "
+    cout << "\nAverage TRT = "
          << (float)total_TRT / (float)n;
 }
-
 
 int main()
 {
