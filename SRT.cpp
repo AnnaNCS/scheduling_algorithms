@@ -75,12 +75,9 @@ void calcAvgTime(Process proc[], int n)
     int waitTime[n], TRT[n], total_waitTime = 0,
             total_TRT = 0;
 
-
     calcWaitTime(proc, n, waitTime);
 
-
     calcTRT(proc, n, waitTime, TRT);
-
 
     cout << "Processes "
          << " Burst time "
