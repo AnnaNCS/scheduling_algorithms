@@ -1,0 +1,55 @@
+Kernel (MAC OS) 
+
+Linux kernel is the center of the Ubuntu OS. 
+It manages and controls the hardware resources.
+
+After installing qemu on Mac: 
+
+To run ubuntu: 
+	bash ubuntumini.sh 
+Enter by filling in login and password 
+To get into the editor 
+	ne 
+Double click brings you to the menu 
+
+In order to get the source code: 
+  sudo get install software-properties-gtk
+
+  apt-get source linux-image-unsigned-$(uname -r)
+
+Check version 
+	 uname -r
+
+Modifying the config 
+
+  chmod a+x debian/rules
+  chmod a+x debian/scripts/*
+  chmod a+x debian/scripts/misc/*
+
+  sudo apt-get install kernel-wedge
+
+  sudo apt-get install libncurses5-dev libncursesw5-dev
+
+  LANG=C fakeroot debian/rules clean
+  LANG=C fakeroot debian/rules editconfigs 
+
+  => kernel configuration new blue windows opens up ! 
+
+  (reference: https://wiki.ubuntu.com/Kernel/BuildYourOwnKernel)
+
+Other additional instalations: 
+  sudo apt-get install pkg-config
+  (For make xconfig)
+  sudo apt-get install qt5-default
+  NO // sudo apt-get install wkhtmltopdf 
+
+  make xconfig ... error 
+  
+  
+ Other additional instalations:
+  (reference: https://linuxconfig.org/how-to-change-welcome-message-motd-on-ubuntu-18-04-server)
+  
+  ls /etc/update-motd.d/
+  sudo chmod -x /etc/update-motd.d/*
+  #to create file - permission required ... error 
+
