@@ -23,7 +23,7 @@ void calcWaitTime(Process proc[], int n,
     int complete = 0, t = 0, minm = INT_MAX;
     int shortest = 0, fin_Time;
     bool check = false;
-
+    
     while (complete != n) {
 
         for (int j = 0; j < n; j++) {
