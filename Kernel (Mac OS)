@@ -37,7 +37,7 @@ Modifying the config
 
   (reference: https://wiki.ubuntu.com/Kernel/BuildYourOwnKernel)
 
-Other additional instalations: 
+Other additional installations: 
   sudo apt-get install pkg-config
   (For make xconfig)
   sudo apt-get install qt5-default
