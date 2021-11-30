@@ -16,8 +16,11 @@ void findWaitingTime(int processes[][3], int n)
 {
     //the waiting time: the previous process' arrival time + CPU time
     wt[0] = 0;
-    for (int  i = 1; i < n ; i++ )
+    for (int i = 1; i < n ; i++ )
         wt[i] =  (processes[i-1][1] + processes[i-1][2]) - processes[i][1];
+    for (int i = 1; i < n ; i++ )
+        if (wt[i] <= 0) {
+            wt[i] = 0; }
 }
 
 void findTurnAroundTime( int processes[][3], int n)

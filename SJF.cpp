@@ -6,8 +6,8 @@
 //possible loop unrolling or something else can be done
 //
 // In order to run the program on a Mac, go the directory where your code is and run the following:
-// % g++ -o FIFO FIFO.cpp
-// % ./FIFO 
+// % g++ -o SJF SJF.cpp
+// % ./SJF 
 
 #include <iostream>
 using namespace std;
