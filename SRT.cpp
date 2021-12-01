@@ -1,7 +1,11 @@
 //
 // Created by jackjstark on 10/30/2021.
 //
-// Shortest Remaining Time (aka Premeptive Shortage Job First)
+// C++ program implementation Shortest Remaining Time (aka Premeptive Shortage Job First)
+//
+// In order to run the program on a Mac, go to the directory where your code is and run the following:
+// % g++ -o SRT SRT.cpp
+// % ./SRT
 
 #include <bits/stdc++.h>
 using namespace std;
