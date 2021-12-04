@@ -176,11 +176,7 @@ LRU replaces the line in the cache that has been in the cache the longest with n
 
 "+"
 </n>
-Belady’s Anomaly 
-</n>
-Gives less number of page faults than any other algorithm
-</n>
-Efficient 
+Belady’s Anomaly; Gives less number of page faults than any other algorithm; Efficient 
 
 "-"
 </n>
