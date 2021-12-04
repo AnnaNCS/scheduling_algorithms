@@ -15,7 +15,7 @@ To run the algorithm programs:
 % ./algorithm_name
 
 
-## Priority Algorithms 
+# Priority Algorithms 
 
 Long-term scheduling:
 * Scheduling to enter the ready state from the new processes or the suspended list
@@ -45,7 +45,7 @@ Preemptive scheduling algorithm
 	p1 starts at t1 and is interrupted by p2, which starts at t2 
 	p2 finsihes at t3 so that p1 ends at t4
 
-## Batch Processes Scheduling
+# Batch Processes Scheduling
 
 FIFO (First-In-First-Out) algorithm, also known as FCFS (First-Come-First-Served)
 * Schedules processes strictly according to the process arrival time. The earlier the arrival, the higher the priority. The advantage of FIFO scheduling is it means the cpu will always be working on the task pushed first. This makes sure the first scheduled task is the first one to complete. If you know the order of your program this can be quite useful as you can potentially use this to optimize getting what you need done most urgently first.
@@ -99,7 +99,7 @@ SRT (Shortest Remaining Time) algorithm
 	What if for two prosesses that are ready to continue have same CPU time left, which one finishes first? 
 
 
-## Interactive Processes Scheduling
+# Interactive Processes Scheduling
 
 Time Quantum
 * A time unit during which a process is allowed to use the CPU. Usually 10 ~ 100 milliseconds.
@@ -138,7 +138,7 @@ Multilevel feedback (MLF) algorithm
 * MLF is a variation of ML, but it addresses problems of starvation and fairness by changing the priority of every process dynamically. The quantum size is doubled with each decreasing priority level. MLF automatically favors short-running processes while processes with long running times gradually migrate to lower levels
 
 
-## Real Time Processes Scheduling  
+# Real Time Processes Scheduling  
 
 Rate monotonic (RM) algorithm
 * RM chedules processes based on the period. The period is the given time for a process during which it must be processed. The shorter the period, the higher the priority. RM is preemptive.
@@ -160,26 +160,5 @@ Rate monotonic (RM) algorithm
 Earliest deadline first (EDF) algorithm
 * EDF prioritizes processes whose deadline is the closest first. The priorities are assigned and change dynamically. EDF is very efficient as compared to other scheduling algorithms in real-time systems. It can make the CPU utilization to about 100% while still guaranteeing the deadlines of all the tasks.
 
-
-# Page Replacement Algorithm 
-## Memory Managment 
-
-## LRU 
-
-LRU replaces the line in the cache that has been in the cache the longest with no reference to it.
-  Recently used -> more likely to be used again
-  Queue as doubly linked list. 
-  Maximum size of the queue = total number of frames available (cache size). 
-  Front end - most recently used pages 
-  Rear end - least recently pages
-  A Hash where [page number; address of the corresponding queue node]. 
-
-"+"
-</n>
-Belady’s Anomaly; Gives less number of page faults than any other algorithm; Efficient 
-
-"-"
-</n>
-More overhead 
 
 
