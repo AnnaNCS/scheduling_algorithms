@@ -1,3 +1,7 @@
+//
+// Created by AnnaN on 12/01/2021.
+//
+
 #include <bits/stdc++.h>
 #include <unordered_map>
 using namespace std;
@@ -57,4 +61,6 @@ int main(){
         }
     
     cash.display();
+    
+    return 0;
     }
