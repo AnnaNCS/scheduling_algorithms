@@ -174,12 +174,12 @@ LRU replaces the line in the cache that has been in the cache the longest with n
   Rear end - least recently pages
   A Hash where [page number; address of the corresponding queue node]. 
 
-+
-Belady’s Anomaly 
-Gives less number of page faults than any other algorithm
-Efficient 
+"+"
+\nBelady’s Anomaly 
+\nGives less number of page faults than any other algorithm
+\nEfficient 
 
-- 
+"-"
 More overhead 
 Hard to implement as hardware 
 
