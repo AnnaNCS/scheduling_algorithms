@@ -75,7 +75,7 @@ int main() {
         return 0;
     }
 
-    utilization = (totalExecutionTime * 1.0/lcm) * 100; // float
+    utilization = (totalExecutionTime * 1.0/lcm) * 100;
     cout << setprecision(4)<<"\n\nUtilization = " << utilization << "%\n";
 
     cout << "\n\nLCM = " << lcm << endl;
@@ -92,9 +92,9 @@ int main() {
         for(int j = 0; j < no; j++){
             if(data[j].ready){
                 if(data[j].rt){
-                    if(!(--(data[j].rt))){//reduce remaining execution time and check it
-                        data[j].ready = 0;//put status waiting
-                        data[j].rt = data[j].ex;//reset remaining time
+                    if(!(--(data[j].rt))){
+                        data[j].ready = 0;
+                        data[j].rt = data[j].ex;
                     }
                 }
                 cout << "   " << i << "\t\t\tP" << data[j].p_Id << endl;
