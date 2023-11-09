@@ -1,12 +1,11 @@
+Operating Systems Project in C++, Fall 2021: Scheduling Algorithms 
 
-# Scheduling Algorithms 
-
-Project: Overview of the main operating system scheduling algorithms and their comparisson. The current project includes implementation of FIFO and SJF in C. The instructions on how to run the code are included in the file. 
+Project: Overview of the main operating system scheduling algorithms and their comparison. The current project includes the implementation of FIFO and SJF in C. The instructions on how to run the code are included in the file. 
 
 The main goal of this project was to:
 
 * Overview, Implement, and Compare the algorithms 
-* The comparisson of the algorithms will display cases in which each algorithm is at its best efficiency. Metrics such as time and speed will be compaired. 
+* The comparison of the algorithms will display cases in which each algorithm is at its best efficiency. Metrics such as time and speed will be compared. 
 
 To run the algorithm programs: 
 
@@ -21,7 +20,7 @@ Long-term scheduling:
 * Scheduling to enter the ready state from the new processes or the suspended list
 
 Short-term scheduling
-* Scheduling of processees to move from ready state to run on the CPU, as well as movement between running, ready, or blocked states 
+* Scheduling of processes to move from ready state to run on the CPU, as well as movement between running, ready, or blocked states 
 
 Non-preemptive scheduling algorithm
 * Allows a process to run until blocked on a resource or terminated
@@ -35,7 +34,7 @@ Non-preemptive scheduling algorithm
 	p2 should start at t2, waits untils p1 ends, and starts at t3 and ends at t4
 
 Preemptive scheduling algorithm
-* May switch betweeen processes
+* May switch between processes
 </n>
 	
 	t1	   t2	      t3	 t4
@@ -48,7 +47,7 @@ Preemptive scheduling algorithm
 ## Batch Processes Scheduling
 
 FIFO (First-In-First-Out) algorithm, also known as FCFS (First-Come-First-Served)
-* Schedules processes strictly according to the process arrival time. The earlier the arrival, the higher the priority. The advantage of FIFO scheduling is it means the cpu will always be working on the task pushed first. This makes sure the first scheduled task is the first one to complete. If you know the order of your program this can be quite useful as you can potentially use this to optimize getting what you need done most urgently first.
+* Schedules processes strictly according to the process arrival time. The earlier the arrival, the higher the priority. The advantage of FIFO scheduling is it means the CPU will always be working on the task pushed first. This makes sure the first scheduled task is the first one to complete. If you know the order of your program this can be quite useful as you can potentially use this to optimize getting what you need done most urgently first.
 </n>
 
 	t1	   t2	      t3	 t4	   t5	      t6	 t7
@@ -63,7 +62,7 @@ FIFO (First-In-First-Out) algorithm, also known as FCFS (First-Come-First-Served
 	p3 arrives at t4, is the next one to arrive, waist for p2 and starts at t6, and finishes at t7
 	
 SJF (Shortest Job First) algorithm, also known as SJN (Shortest Job Next)
-* Schedules processes according to the total CPU time requirements. The shorter the required CPU time, the higher the priority. The advantage of SJF scheduling is it means the lightest tasks are handled quickly which can leave more cpu resources for heavier tasks. Though it is important to note that if you're not careful it can result in long tasks never getting cpu time they need if you have a ton of shorter tasks.
+* Schedules processes according to the total CPU time requirements. The shorter the required CPU time, the higher the priority. The advantage of SJF scheduling is it means the lightest tasks are handled quickly which can leave more CPU resources for heavier tasks. However it is important to note that if you're not careful it can result in long tasks never getting cpu time they need if you have a ton of shorter tasks.
 </n>
 	
 	t1	   t2	      t3	 t4	   t5	      t6	 t7
@@ -73,7 +72,7 @@ SJF (Shortest Job First) algorithm, also known as SJN (Shortest Job Next)
 	
 	.. WAIT TIME 
 	__ CPU TIME
-	p1 arrives at t1, is the first one, finishes at t4 
+	p1 arrives at t1, is the first one, and finishes at t4 
 	p2 arrives at t3, has CPU time of 2
 	p3 arrives at t4, has CPU time of 1
 	=> p3 start first at t4 and finishes at t5 
@@ -96,7 +95,7 @@ SRT (Shortest Remaining Time) algorithm
 	at t4, p1 has 4 CPU time left, p2 has 2 and p3 has 1   => p3 starts and ends at t5
 	at t5, p1 has 4 CPU time left and p2 only 2 	       => p2 continues and ends at t7 
 	and at t7 p1 is the only left and continues and ends at t11
-	What if for two prosesses that are ready to continue have same CPU time left, which one finishes first? 
+	What if two processes that are ready to continue have the same CPU time left, which one finishes first? 
 
 
 ## Interactive Processes Scheduling
@@ -138,10 +137,10 @@ Multilevel feedback (MLF) algorithm
 * MLF is a variation of ML, but it addresses problems of starvation and fairness by changing the priority of every process dynamically. The quantum size is doubled with each decreasing priority level. MLF automatically favors short-running processes while processes with long running times gradually migrate to lower levels
 
 
-## Real Time Processes Scheduling  
+## Real-Time Processes Scheduling  
 
 Rate monotonic (RM) algorithm
-* RM chedules processes based on the period. The period is the given time for a process during which it must be processed. The shorter the period, the higher the priority. RM is preemptive.
+* RM schedules processes based on the period. The period is the given time for a process during which it must be processed. The shorter the period, the higher the priority. RM is preemptive.
 
 </n>
 	
@@ -162,13 +161,13 @@ Earliest deadline first (EDF) algorithm
 
 
 # Page Replacement Algorithm 
-## Memory Managment 
+## Memory Management 
 
 ## LRU 
 
 LRU replaces the line in the cache that has been in the cache the longest with no reference to it.
   Recently used -> more likely to be used again
-  Queue as doubly linked list. 
+  Queue as a doubly linked list. 
   Maximum size of the queue = total number of frames available (cache size). 
   Front end - most recently used pages 
   Rear end - least recently pages
@@ -181,5 +180,7 @@ Belady’s Anomaly; Gives less number of page faults than any other algorithm; E
 "-"
 </n>
 More overhead 
+
+On this project worked Anna Nefedenkova and Jack Stark
 
 
